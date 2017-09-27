@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="./style.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/css?family=Asap+Condensed" rel="stylesheet">
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: 'Asap Condensed', sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+/*.img {margin-bottom: -7px}*/
+
+.rightalign2{
+    position: absolute;
+    right: 10px;
+    top: 18px;
+  }
+.rightalign3{
+    position: absolute;
+    right: 10px;
+    top: 61px;
+  }
+  .button{
+    padding-bottom: 0px;
+    margin-bottom: 0px;
+  }
+  .off:hover{
+    filter: grayscale(0%);
+  }
+  a{
+    text-decoration: none;
+  }
+</style>
+<body class="white">
+
+<!-- Icon Bar (Sidebar - hidden on small screens) -->
+
+
+<nav class="sidebar bar-block small hide-small center">
+  <!-- Avatar image in top left corner -->
+<!--   <img src="/mages/avatar_smoke.jpg" style="width:100%"> -->
+  <a href="./index.html" class="bar-item padding-large hover-black" style="text-decoration: none;">
+    <i class="fa fa-home xxlarge"></i>
+    <p>HOME</p>
+  </a>
+  <a href="#about" class="bar-item hover-black tablink" onclick="openCity(event,'about')" style="text-decoration: none;">
+    <i class="fa fa-user xxlarge"></i>
+    <p>PROFILE</p>
+  </a>
+  <a href="#photos" class="bar-item tablink hover-black" onclick="openCity(event,'photos')" style="text-decoration: none;">
+    <i class="fa fa-eye xxlarge"></i>
+    <p>PHOTOS</p>
+  </a>
+  <a href="#contact" class="bar-item hover-black tablink" onclick="openCity(event,'contact')" style="text-decoration: none;">
+    <i class="fa fa-envelope fa-3x" style="margin-bottom: 0px;padding: 0px;"></i>
+    <p>CONTACT</p>
+  </a>
+</nav>
+
+
+<!-- Navbar on small screens (Hidden on medium and large screens) -->
+<!-- <div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button" style="width:25% !important">ABOUT</a>
+    <a href="#photos" class="w3-bar-item w3-button" style="width:25% !important">PHOTOS</a>
+    <a href="#contact" class="w3-bar-item w3-button" style="width:25% !important">CONTACT</a>
+  </div>
+</div> -->
+
+<!-- Page Content -->
+<div class="padding-large" id="main">
+  <!-- Header/Home -->
+<!-- 
+  <div class="w3-content w3-justify w3-text-grey w3-padding-64" id="about">
+    <h2 class="w3-text-light-grey">My Name</h2>
+    <hr style="width:200px" class="w3-opacity">
+    <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <h3 class="w3-padding-16 w3-text-light-grey">My Skills</h3>
+    <p class="w3-wide">Photography</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:95%"></div>
+    </div>
+    <p class="w3-wide">Web Design</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="w3-wide">Photoshop</p>
+    <div class="w3-white">
+      <div class="w3-dark-grey" style="height:28px;width:80%"></div>
+    </div><br>
+    
+    <div class="w3-row w3-center w3-padding-16 w3-section w3-light-grey">
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">11+</span><br>
+        Partners
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="w3-quarter w3-section">
+        <span class="w3-xlarge">150+</span><br>
+        Meetings
+      </div>
+    </div>
+
+    <button class="w3-button w3-light-grey w3-padding-large w3-section">
+      <i class="fa fa-download"></i> Download Resume
+    </button>
+    
+    
+    Testimonials
+    <h3 class="w3-padding-24 w3-text-light-grey">My Reputation</h3>  
+    <img src="/w3images/bandmember.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Chris Fox.</span> CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+    
+    <img src="/w3images/avatar_g2.jpg" alt="Avatar" class="w3-left w3-circle w3-margin-right" style="width:80px">
+    <p><span class="w3-large w3-margin-right">Rebecca Flex.</span> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p>
+  </div> -->
+  
+  <div class="content tab" id="photos">
+    <header class="container padding-16 center " id="home">
+      <img src="https://static.pexels.com/photos/211052/pexels-photo-211052.jpeg" class="circle border" style="width:200px;height: 200px;">
+    <h1 class="jumbo"><span class="hide-small">I'm</span> John Doe.</h1>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been<br> the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </header>
+    <!-- <hr style="width:200px;color: black" class=""> -->
+
+    <!-- Grid for photos -->
+      <div class="padding-16 center">
+        <div class="bar border">
+          <a href="#" class="bar-item button" onclick="max()" style="text-decoration: none;">Greyscale</a>
+          <a href="#" class="bar-item button light-grey">Sepia</a>
+          <a href="#" class="bar-item button" onclick="min()" style="text-decoration: none;">Greyscale-min</a>
+          
+        </div>
+      </div>
+      <div class="row" id="myGrid" style="margin-bottom:128px">
+        <div class="half">
+          <div class=" display-container off card-4" style="position: relative;filter: grayscale(0%);">
+            <img class="img" src="https://static.pexels.com/photos/287240/pexels-photo-287240.jpeg" style="width:100%;border: 2px solid white;height: 440px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class=" display-container card-4" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/247929/pexels-photo-247929.jpeg" style="width:100%;border: 2px solid white;height: 350px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                   <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class=" display-container card-4" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/442559/pexels-photo-442559.jpeg" style="width:100%;border: 2px solid white;height: 400px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-heart fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class=" display-container card-4" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/300849/pexels-photo-300849.jpeg" style="width: 100%;border: 2px solid white;height: 270px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="half">
+          <div class=" display-container" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/207680/pexels-photo-207680.jpeg" style="width:100%;border: 2px solid white;height: 570px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class=" display-container" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/211052/pexels-photo-211052.jpeg" style="width:100%;border: 2px solid white;height: 450px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class=" display-container" style="position: relative;">
+            <img class="img" src="https://static.pexels.com/photos/96409/pexels-photo-96409.jpeg" style="width:100%;border: 2px solid white;height: 350;">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+          <div class=" display-container" style="position: relative;">
+            <img class="img grayscale-min" src="https://static.pexels.com/photos/248771/pexels-photo-248771.jpeg" style="width:100%;border: 2px solid white;height: 220px">
+            <div class="">
+              <section class=" display-hover display-bottommiddle" style="width: 99%;bottom: 30px;">
+                <div class="text-white " style="background-color: rgba(0,0,0,0.8);padding: 3px 4px;">
+                  <p class="left-align" style="font-size: 12px;font-family: 'Quattrocento', serif;"><span class="text-blue" style="font-family:'Asap Condensed', sans-serif">#<b>Janedoe</b></span> <i>Lorem Ipsum is simply dummy text of the printing and typesetting industry </i><br><span class="text-blue"><i class="fa fa-heart"></i> 24  /  <i class="fa fa-comment-o"></i> 2</span></p>
+                </div>
+              </section>
+              <div class="display-hover">
+                <section class="rightalign2">
+                  <span class="fa-stack fa-lg ">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-edit fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+
+                <section class="rightalign3">
+                  <span class="fa-stack fa-lg center">
+                    <i class="fa fa-circle fa-stack-2x" style="color: #212F3C"></i>
+                    <i class="fa fa-trash-o fa-stack-1x fa-inverse text-white"></i>
+                  </span>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+
+  <div class="padding-64 content text-grey tab" id="contact">
+    <header class="container padding-16 center " id="home">
+        <img src="https://static.pexels.com/photos/211052/pexels-photo-211052.jpeg" class="circle border" style="width:200px;height: 200px;">
+      <h1 class="jumbo"><span class="hide-small">I'm</span> John Doe.</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been<br> the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+    </header>
+    <h2 class="text-dark-grey">Contact Me</h2>
+    <hr style="width:200px" class="opacity">
+
+    <div class="section">
+      <p><i class="fa fa-map-marker fa-fw text-dark-grey xxlarge margin-right"></i> Chicago, US</p>
+      <p><i class="fa fa-phone fa-fw text-dark-grey xxlarge margin-right"></i> Phone: +00 151515</p>
+      <p><i class="fa fa-envelope fa-fw text-dark-grey xxlarge margin-right"> </i> Email: mail@mail.com</p>
+    </div><br>
+    <p>Lets get in touch. Send me a message:</p>
+
+    <form action="/action_page.php" target="_blank">
+      <p><input class="input padding-16" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="input padding-16" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="input padding-16" type="text" placeholder="Subject" required name="Subject"></p>
+      <p><input class="input padding-16" type="text" placeholder="Message" required name="Message"></p>
+      <p>
+        <button class="button light-grey padding-large" type="submit">
+          <i class="fa fa-paper-plane"></i> SEND MESSAGE
+        </button>
+      </p>
+    </form>
+  </div>
+  
+
+  <div class="content justify text-grey padding-64 tab" id="about">
+    <header class="container padding-16 center " id="home">
+        <img src="https://static.pexels.com/photos/211052/pexels-photo-211052.jpeg" class="circle border grayscale-max" style="width:200px;height: 200px;">
+      <h1 class="jumbo"><span class="hide-small">I'm</span> John Doe.</h1>
+      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+    </header>
+    <h2 class="text-light-grey">About Me</h2>
+    <hr style="width:200px" class="opacity">
+    <p style="line-height: 24px">Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    </p>
+    <h3 class="padding-16 text-light-grey">My Skills</h3>
+    <p class="wide">Photography</p>
+    <div class="white">
+      <div class="dark-grey" style="height:28px;width:85%"></div>
+    </div>
+    <p class="wide">Web Design</p>
+    <div class="white">
+      <div class="dark-grey" style="height:28px;width:25%"></div>
+    </div>
+    <p class="wide">Photoshop</p>
+    <div class="white">
+      <div class="dark-grey" style="height:28px;width:55%"></div>
+    </div><br>
+    
+    <div class="row center padding-16 section light-grey">
+      <div class="col-sm-3 section">
+        <span class="xlarge">11+</span><br>
+        Favorites
+      </div>
+      <div class="col-sm-3 section">
+        <span class="xlarge">55+</span><br>
+        Projects Done
+      </div>
+      <div class="col-sm-3 section">
+        <span class="xlarge">89+</span><br>
+        Happy Clients
+      </div>
+      <div class="col-sm-3 section">
+        <span class="xlarge">150+</span><br>
+        Followers
+      </div>
+    </div>
+
+    <button class="button dark-grey padding-large section">
+      <i class=""></i> FOLLOW +
+    </button>
+        
+    <!-- Testimonials -->
+    <h3 class="padding-24 text-light-grey">Referees</h3>  
+    <img src="/mages/bandmember.jpg" alt="Avatar" class="left circle margin-right" style="width:80px">
+    <p><span class="large margin-right">Chris Fox.</span> <br>CEO at Mighty Schools.</p>
+    <p>Jane Doe saved us from a web disaster.</p><br>
+    
+    <img src="/mages/avatar_g2.jpg" alt="Avatar" class="left circle margin-right" style="width:80px">
+    <p><span class="large margin-right">Rebecca Flex.</span><br> CEO at Company.</p>
+    <p>No one is better than Jane Doe.</p>
+  <!-- End About Section -->
+    <button class="button right wide dark-grey padding-large section">
+      <i class=""></i> EDIT +
+    </button>
+  </div>
+  
+
+<!--   <footer class="w3-content w3-padding-64 w3-text-grey w3-xlarge">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  </footer>  -->
+
+<!-- END PAGE CONTENT -->
+</div>
+<script type="text/javascript">
+function max() {
+  var x = document.getElementById("main");
+      x.className = "grayscale-max";
+}
+function min() {
+  var x = document.getElementById("main");
+      x.className = "grayscale-min";
+}
+function openCity(evt, cityName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("tab");
+  for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+</body>
+</html>
